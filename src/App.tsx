@@ -6,14 +6,15 @@ import { Routes, Route, NavLink } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <header>
-        <nav>
-          <NavLink to="/">Accueil</NavLink>
+    <div className='container mt-10'>
+      <header className='flex justify-between items-center mb-5'>
+        <img className='w-10' src="https://avatars.githubusercontent.com/u/46349684?v=4" alt="logo" />
+        <nav className='flex justify-end'>
+          <NavLink className='mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to="/">Accueil</NavLink>
           <br></br>
-          <NavLink to="/ressources">Ressources</NavLink>
+          <NavLink className='mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to="/ressources">Ressources</NavLink>
           <br></br>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink className='mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to="/contact">Contact</NavLink>
         </nav>
       </header>
       <Routes>
